@@ -24,5 +24,16 @@ class Queues
 
     public function queue($args)
     {
+        try {
+            return Response::json([
+                'status' => true,
+                'data' => Queue::find($args['id'])
+            ]);
+        } catch (\PDOException $e) {
+            return Response::json([
+                'status' => false,
+                'data' => $e->getMessage()
+            ]);
+        }
     }
 }
