@@ -1,0 +1,21 @@
+{
+    "name": "stefanyohansson/kiwi-api",
+    "description": "Kiwi API",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {"Kiwi\\": "src/"}
+    },
+    "authors": [
+        {
+            "name": "Stefan Yohansson",
+            "email": "snotr@sadfeelings.me"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "fabpot/goutte": "^3.2",
+        "nikic/fast-route": "^1.3",
+        "aura/sqlquery": "^2.7"
+    }
+}
