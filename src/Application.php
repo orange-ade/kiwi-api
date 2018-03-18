@@ -37,7 +37,7 @@ class Application
             $f_handler = explode('@', $handler);
             $f_class = new $f_handler[0];
             $method = $f_handler[1];
-            $f_class->$method($vars);
+            Response::print($f_class->$method($vars));
             break;
         }
     }
